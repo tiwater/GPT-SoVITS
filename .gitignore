@@ -11,4 +11,6 @@ GPT_weights
 SoVITS_weights
 TEMP
 
-
+.direnv
+.venv
+*weight.txt

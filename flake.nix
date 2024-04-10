@@ -84,7 +84,7 @@
             ]) ++
             [ nix-gl-host.defaultPackage.${system} ];
           shellHook = ''
-            export LD_LIBRARY_PATH="$(nixglhost -p):${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH"
+            export LD_LIBRARY_PATH="$(nixglhost -p):$LD_LIBRARY_PATH"
             if [[ ! -d .venv ]]; then
               echo "No virtual env found at ./.venv, creating a new virtual env linked to the Python site defined with Nix"
               ${pkgs.lib.getExe pkgs.python310} -m venv .venv --copies
